@@ -8,8 +8,17 @@ class TodoList
   end
   
   def add_item(new_item)
-    item = Item.new(new_item)
-    @items.push(item)
+  
+    if new_item.is_a? String
+      item = Item.new(new_item)
+      @items.push(item)
+	elsif new_item.is_a? Array
+      new_item.each do |single_item|
+        item = Item.new(single_item)
+        @items.push(item)
+	  end
+	end
+	
   end
   
   def remove_item(order_number)
