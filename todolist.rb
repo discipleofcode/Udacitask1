@@ -12,6 +12,12 @@ class TodoList
     @items.push(item)
   end
   
+  def remove_item(order_number)
+    if (order_number < @items.length and order_number >= 0)
+      @items.delete_at(order_number - 1)
+	end  
+  end
+  
 end
 
 class Item
