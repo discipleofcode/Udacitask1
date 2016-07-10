@@ -10,8 +10,10 @@ class TodoList
   attr_reader :title, :items
 
   def initialize(list_title)
+  
     @title = list_title
     @items = Array.new # Starts empty! No Items yet!
+	
   end
   
   def add_item(new_item)
@@ -29,23 +31,27 @@ class TodoList
   end
   
   def remove_item(order_number)
-    if (order_number < @items.length and order_number >= 0)
+  
+    if (order_number <= @items.length and order_number >= 0)
       @items.delete_at(order_number - 1)
 	end  
+	
   end
   
   def print
+  
     titleString = ">>>   #{@title}   <<<"
 	puts print_hr(titleString.length)
 	puts titleString
 	puts print_hr(titleString.length)
 	puts
     @items.each(&:to_s)
+	
   end
   
   def update_item(order_number, options={})
 
-    if (order_number < @items.length and order_number >= 0)
+    if (order_number <= @items.length and order_number >= 0)
 	
       default_options = {
 	    :description => @items[order_number - 1].description,
@@ -65,6 +71,12 @@ class TodoList
 	
   end
   
+  def all_done?
+    
+    !@items.any?{|item| item.completed_status == false}
+	
+  end
+  
 end
 
 class Item
@@ -74,11 +86,14 @@ class Item
   # Initialize item with a description and marked as
   # not complete
   def initialize(item_description)
+  
     @description = item_description
     @completed_status = false
+	
   end
   
   def to_s
+  
     print_hr ("Description: ".length + @description.length)
     puts "Description: #{@description}"
 	if (@completed_status)
@@ -87,6 +102,7 @@ class Item
 	  puts "Status: not done yet"
 	end
 	puts
+	
   end
   
 end
