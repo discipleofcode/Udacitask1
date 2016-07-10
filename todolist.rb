@@ -1,3 +1,7 @@
+def print_hr(length = 20)
+  puts "=" * length
+end
+
 class TodoList
 
   attr_reader :title, :items
@@ -27,6 +31,15 @@ class TodoList
 	end  
   end
   
+  def print
+    titleString = ">>>   #{@title}   <<<"
+	puts print_hr(titleString.length)
+	puts titleString
+	puts print_hr(titleString.length)
+	puts
+    @items.each(&:to_s)
+  end
+  
 end
 
 class Item
@@ -38,6 +51,17 @@ class Item
   def initialize(item_description)
     @description = item_description
     @completed_status = false
+  end
+  
+  def to_s
+    print_hr ("Description: ".length + @description.length)
+    puts "Description: #{@description}"
+	if (@completed_status)
+	  puts "Status: done"
+    else
+	  puts "Status: not done yet"
+	end
+	puts
   end
   
 end
