@@ -40,10 +40,10 @@ class TodoList
   
   def print
   
-    titleString = ">>>   #{@title}   <<<"
-	puts print_hr(titleString.length)
-	puts titleString
-	puts print_hr(titleString.length)
+    title_string = ">>>   #{@title}   <<<"
+	puts print_hr(title_string.length)
+	puts title_string
+	puts print_hr(title_string.length)
 	puts
     @items.each(&:to_s)
 	
@@ -69,6 +69,12 @@ class TodoList
 	  
 	end 
 	
+  end
+  
+  def move_item(order_number, new_order_number)
+    if (order_number <= @items.length and order_number >= 0 and new_order_number <= @items.length and new_order_number >= 0)
+      @items.insert(new_order_number - 1, @items.delete_at(order_number - 1))
+	end
   end
   
   def all_done?
