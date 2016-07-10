@@ -16,6 +16,10 @@ class TodoList
 	
   end
   
+  def update_title(name)
+    @title = name
+  end
+  
   def add_item(new_item)
   
     if new_item.is_a? String
@@ -59,8 +63,6 @@ class TodoList
       }
 	  
       options = options.reverse_merge(default_options)
-	  
-	  puts options[:description]
 	  
       @items[order_number - 1].description = options[:description]
       @items[order_number - 1].completed_status = options[:done]
