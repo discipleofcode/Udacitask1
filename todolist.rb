@@ -1,10 +1,3 @@
-# this >>require<< is for playing around with "Ruby options pattern"
-require 'active_support/core_ext'
-
-def print_hr(length = 20)
-  puts "=" * length
-end
-
 class TodoList
 
   attr_reader :title, :items
@@ -62,7 +55,7 @@ class TodoList
 	    :done => @items[order_number - 1].completed_status
       }
 	  
-      options = options.reverse_merge(default_options)
+      options = default_options.merge(options) {|key, oldval, newval| newval ? newval : oldval}
 	  
       @items[order_number - 1].description = options[:description]
       @items[order_number - 1].completed_status = options[:done]
@@ -83,6 +76,10 @@ class TodoList
     
     !@items.any?{|item| item.completed_status == false}
 	
+  end
+  
+  def print_hr(length = 20)
+    puts "=" * length
   end
   
 end
@@ -111,6 +108,10 @@ class Item
 	end
 	puts
 	
+  end
+  
+  def print_hr(length = 20)
+    puts "=" * length
   end
   
 end

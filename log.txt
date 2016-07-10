@@ -1,0 +1,94 @@
+commit 97f8694a8bc86b49345e81ccb18f8dfd6435ba11
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 03:47:13 2016 +0200
+
+    added new_features.txt
+
+commit a884c8cf4e32268e4d2e4996d7e0ef89007c2c14
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 03:38:27 2016 +0200
+
+    updated udacitask so it fires now methods from todolist
+    
+    added update_title metod to list
+    removed some unnecessery puts
+
+commit 37bea913c327957e8e0e3a99caae3c7ecdfc3754
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 03:23:09 2016 +0200
+
+    added 3rd feature - abillity to move item from one position to another
+    
+    changed variable name titleString to title_string
+
+commit c88461564866ae7130564ef0b8c978d981f1d9bb
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 03:09:33 2016 +0200
+
+    added all_done? method to TodoList
+    
+    small fix for updating/removing item
+
+commit a02140ba757179f4365a121671745c7350b612a7
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 02:58:20 2016 +0200
+
+    added functionality to update items status
+    
+    as my 2nd feature I've added functionality to change description using the Ruby Options Pattern
+
+commit fdafb76e8b873d60113791a87c2a62abbb6be12b
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 02:29:15 2016 +0200
+
+    added functionality for printing list with items
+
+commit ebfb60f5dcbab8f47ef1cc74ec5171892ebfb510
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:59:33 2016 +0200
+
+    added 1st new "feature" - multiple items adding. Changed add_item method to work with either one item (string) or multiple items (array of strings)
+
+commit f79b701b83302d308692562dff8951acc14e6447
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:50:47 2016 +0200
+
+    added functionality to remove item from TodoList
+
+commit aab1e629e24216b7cb10066c1f8e61e93f546505
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:31:53 2016 +0200
+
+    changes made to TodoList class:
+    
+    - added a method for adding new Items
+
+commit a7b1228e8c8b72aa56e16b0227891e73185a7c13
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:26:46 2016 +0200
+
+    changes made to Item class:
+    
+    - added getters and setters for description, completed status
+    - added constructor
+
+commit 93b0c0a1da6b9832ac9cb95522ccb63c794638a9
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:22:50 2016 +0200
+
+    changes in TodoList class:
+    
+    - added setters and getter for title and items properties
+    - added constructor
+
+commit 765bf4d4299eb38c93ef49c9c3b6a456750b43d6
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:16:09 2016 +0200
+
+    files renaming
+
+commit 93e2d785d53b215eacef5dff58ebcb08bb6a2d5a
+Author: Rafael Piazdecki <rafael.piazdecki@b2net.pl>
+Date:   Sun Jul 10 01:13:08 2016 +0200
+
+    Initial Commit
