@@ -1,0 +1,24 @@
+1. multiple items adding
+we can pass array of strings to add multiple items (we can still pass just single string)
+
+>> example
+
+list.add_item(["first","second"])
+same as
+list.add_item("first")
+list.add_item("second")
+
+2, changing items description
+we can change description using Ruby Options Pattern
+
+>> example
+
+list.update_item(1, :description => "new description")
+list.update_item(1, :description => "new description", :done => true)
+list.update_item(1, :done => true)
+
+3. abillity to move item from one position to other positon
+
+>> example
+
+list.move_item(1, 2) - move first item at second place
